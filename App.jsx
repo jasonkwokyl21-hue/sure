@@ -218,6 +218,7 @@ export default function App() {
           <AIFormView onOpenAI={() => setIsCameraOpen(true)} onOpenPremium={() => setIsPremiumOpen(true)} />
         )}
         {activeTab === 'communities' && <CommunitiesView />}
+        {activeTab === 'pickup' && <PickUpView />}
         {activeTab === 'stats' && <StatsView />}
         {activeTab === 'profile' && <ProfileView onOpenSettings={() => setIsSettingsOpen(true)} unitSystem={unitSystem} />}
         
@@ -1514,8 +1515,8 @@ function BottomNav({ activeTab, setActiveTab, onOpenAction }) {
   const tabs = [
     { id: 'home', icon: Home, label: 'Home' }, { id: 'train', icon: Dumbbell, label: 'Train' },
     { id: 'ai_form', icon: Sparkles, label: 'Form' },
-    { id: 'communities', icon: Users, label: 'Communities' }, { id: 'stats', icon: BarChart2, label: 'Stats' },
-    { id: 'profile', icon: User, label: 'Profile' },
+    { id: 'communities', icon: Users, label: 'Communities' }, { id: 'pickup', icon: MapPin, label: 'PickUp' },
+    { id: 'stats', icon: BarChart2, label: 'Stats' }, { id: 'profile', icon: User, label: 'Profile' },
   ];
 
   return (
